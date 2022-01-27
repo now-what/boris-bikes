@@ -6,8 +6,10 @@ class DockingStation
     #     @stored_bikes = []
     # end 
     def release_bike
+        fail "No bikes available" unless @bike
       @bike  
-      #raise "no bikes" 
+      # Bike.new
+      # raise "No bikes available" if @bike 
     end
     def dock(bike) 
       # @stored_bikes << bike
