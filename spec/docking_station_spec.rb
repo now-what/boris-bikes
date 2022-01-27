@@ -41,6 +41,10 @@ it 'docks a bike at a station' do
   subject.dock(bike)
   expect(subject.bike).to eq bike  
 end
+it 'should say docks full if full' do
+  subject.dock(Bike.new)
+  expect {subject.dock Bike.new}.to raise_error("Docking station full")  
+end
 
 end
 describe "#bike" do 
